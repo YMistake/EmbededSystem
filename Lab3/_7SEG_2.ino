@@ -58,7 +58,7 @@ void setup() {
   pinMode(Q2, OUTPUT);
   pinMode(Q3, OUTPUT);
   pinMode(Q4, OUTPUT);
-  display7seg(0);
+  display7seg(8);
 }
 
 // the loop function runs over and over again forever

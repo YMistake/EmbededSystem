@@ -63,8 +63,6 @@ void setup() {
 
 // the loop function runs over and over again forever
 void loop() {
-  digitalWrite(Q1,1);
-  digitalWrite(Q2,1);
-  digitalWrite(Q3,1);
   digitalWrite(Q4,1);
+
 }
