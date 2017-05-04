@@ -15,28 +15,6 @@ void setup(){
 }
 
 void loop(){
-  // use 2 jumper for switch case
-  // temp1 = digitalRead(s1);
-  // temp2 = digitalRead(s2);
-  // if (temp1 == 0 && temp2 == 0){
-  //   LED_BLANK();
-  // }
-  // if (temp1 == 1){
-  //   swipe(50);
-  // } else if (temp2 == 1){
-  //   two_way();
-  // }
-
-  // use LDR or Variable Resister to switch case
-  // temp1 = analogRead(s3);
-  // Serial.println(temp1);
-  // if (temp1 < 500 && temp1 > 0){
-  //   swipe(50);
-  // } else if (temp1 >= 500){
-  //   two_way();
-  // } else if (temp1 == 0){
-  //   LED_BLANK();
-  // }
 
   // use Variable Resister to control speed of LED
   temp1 = analogRead(s3);
