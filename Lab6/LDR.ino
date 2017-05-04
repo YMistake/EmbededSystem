@@ -2,27 +2,27 @@
 int led1 = 13;
 int led2 = 12;
 int led3 = 11;
-int s = A0;
-int temp1,temp2;
+int s3 = A0;
+int temp;
 
 void setup(){
-  pinMode(s, INPUT);
+  pinMode(s3, INPUT);
   Serial.begin(9600);
 }
 
 void loop(){
-
-  // use Variable Resister to control speed of LED
-  temp1 = analogRead(s);
-  Serial.println(temp1);
-  temp1 = temp1 / 5;
-  temp2 = 205 - temp1;
-
-  if(temp2 == 205){
-    LED_BLANK();
-  } else {
-    swipe(temp2);
-  }
+   temp = analogRead(s3);
+   Serial.println(temp);
+   if (temp > 10){
+     LED_BLANK();
+   } else {
+     LED1();
+     LED2();
+     LED3();
+     LED4();
+     LED5();
+     LED6();
+   }
 }
 
 // function for define each LED
@@ -33,7 +33,7 @@ void LED(int l1, int l2, int l3){
   digitalWrite(l2, LOW);
   pinMode(l3, INPUT);
   digitalWrite(l3, LOW);
-  delay(5);
+  delay(1);
 }
 
 // function for blank LED
@@ -45,30 +45,6 @@ void LED_BLANK(){
   pinMode(led3, OUTPUT);
   digitalWrite(led3, LOW);
   delay(3);
-}
-
-// function Blink LED from 1 to 6 and back to 1
-void swipe(int d){
-  LED1();
-  delay(d);
-  LED2();
-  delay(d);
-  LED3();
-  delay(d);
-  LED4();
-  delay(d);
-  LED5();
-  delay(d);
-  LED6();
-  delay(d);
-  LED5();
-  delay(d);
-  LED4();
-  delay(d);
-  LED3();
-  delay(d);
-  LED2();
-  delay(d);
 }
 
 // function for set LED 1 - 6 on
@@ -96,7 +72,3 @@ void LED6(){
   LED(led1,led3,led2);
 }
 
-// function delay
-void dl(){
-  delay(40);
-}
